@@ -1,4 +1,4 @@
-const notesDB = require('../../db/db.json');
+const notesDB = require('../db/db.json');
 
 module.exports = (app) => {
     // API GET Request

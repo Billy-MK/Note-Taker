@@ -1,8 +1,3 @@
-// Dependencies
-
-const fs = require('fs');
-const generateUniqueId = require('generate-unique-id');
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -183,5 +178,3 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
-
-app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));

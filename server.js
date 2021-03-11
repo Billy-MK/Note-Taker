@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Serving static files in Express
+
+app.use(express.static('public'))
+
 // Routes
 
 require('./routes/HTML_Routes.js')(app);
