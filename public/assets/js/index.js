@@ -1,7 +1,13 @@
+// Dependencies
+
+const fs = require('fs');
+const express = require('express');
+const path = require('path');
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
-let newNoteBtn;
+let newNoteBtn; 
 let noteList;
 
 if (window.location.pathname === '/notes') {
