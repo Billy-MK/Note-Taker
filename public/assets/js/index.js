@@ -5,15 +5,14 @@ const express = require('express');
 const path = require('path');
 const generateUniqueId = require('generate-unique-id');
 
-// HTML Routes
+// Express app
 
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
+const app = express();
+const PORT = 3000;
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-
-// API Routes
-
-
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 let noteTitle;
 let noteText;
@@ -195,3 +194,5 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
