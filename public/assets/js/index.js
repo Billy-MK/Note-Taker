@@ -3,12 +3,17 @@
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
+const generateUniqueId = require('generate-unique-id');
 
 // HTML Routes
 
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
 
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+
+// API Routes
+
+
 
 let noteTitle;
 let noteText;
