@@ -14,4 +14,4 @@ module.exports = (app) => {
       fs.writeFile('./db/db.json', notesDBStringify, (err) => console.error(err));
       res.json(notesDB);
     }); 
-}
+};
