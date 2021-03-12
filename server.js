@@ -13,12 +13,13 @@ app.use(express.json());
 
 // Serving static files in Express
 
-app.use(express.static('public'))
+app.use(express.static('./public'))
+app.use(express.static('./db'))
 
 // Routes
 
-require('./routes/HTML_Routes.js')(app);
 require('./routes/api_routes.js')(app);
+require('./routes/HTML_Routes.js')(app);
 
 // Listener
 
