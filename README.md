@@ -41,3 +41,7 @@ Email: wmontoothkeating@gmail.com
 ## License
 
 This application is covered under the MIT License.
+
+## Screenshots
+
+[Screenshot of note taking application with two created notes on the left-hand side](./screenshots/screenshot.png)
